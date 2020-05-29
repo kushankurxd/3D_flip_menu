@@ -1,6 +1,6 @@
 # flutter3dflipmenu
 
-A new Flutter design for Next-Gen `Side Navigation Menu`.
+A new Flutter design for Next-Gen `Side Navigation Bar`.
 
 #### Inspired from : [Dribble](https://dribbble.com/shots/4773637-3D-flip-menu)
 
