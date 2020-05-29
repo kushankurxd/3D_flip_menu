@@ -2,6 +2,8 @@
 
 A new Flutter design for Next-Gen `Side Navigation Menu`.
 
+#### Inspired from : [Dribble](https://dribbble.com/shots/4773637-3D-flip-menu)
+
 #### Screenshots
 ![ezgif com-resize](https://user-images.githubusercontent.com/37204706/83208955-b00ad680-a174-11ea-86dd-2f3b76d1af6e.gif)
 ![Screenshot_20200529-060149](https://user-images.githubusercontent.com/37204706/83208965-b26d3080-a174-11ea-8b8f-8b2eb4ac07a8.jpg)
