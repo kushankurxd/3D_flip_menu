@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter3dflipmenu/screens/home.dart';
+import 'package:flutter3dflipmenu/screens/menu.dart';
 import 'package:flutter3dflipmenu/utils/config.dart';
 
 void main() {
@@ -42,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage>
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: Duration(milliseconds: 500),
+      duration: Duration(milliseconds: 400),
       vsync: this,
     );
     _bodyAnimation =
@@ -83,9 +84,9 @@ class _MyHomePageState extends State<MyHomePage>
                 builder: (BuildContext context, Widget child) {
                   return Transform(
                     transform: Matrix4.identity()
-                      ..setEntry(3, 2, 0.0015)
+                      ..setEntry(3, 2, 0.004)
                       ..rotateY(-_bodyAnimation.value),
-                    alignment: Alignment(0.4, 0),
+                    alignment: Alignment(0.3, 0),
                     child: Container(
                       height: MediaQuery.of(context).size.height,
                       width: MediaQuery.of(context).size.width,
@@ -100,13 +101,14 @@ class _MyHomePageState extends State<MyHomePage>
                 builder: (BuildContext context, Widget child) {
                   return Transform(
                     transform: Matrix4.identity()
-                      ..setEntry(3, 2, 0.001)
+                      ..setEntry(3, 2, 0)
                       ..rotateY(_menuAnimation.value),
                     alignment: Alignment.centerLeft,
                     child: Container(
                       height: MediaQuery.of(context).size.height,
-                      width: MediaQuery.of(context).size.width / 1.45,
-                      color: Colors.white,
+                      width: MediaQuery.of(context).size.width / 1.5,
+                      color: Colors.grey[100],
+                      child: MenuXD(),
                     ),
                   );
                 },
@@ -119,19 +121,18 @@ class _MyHomePageState extends State<MyHomePage>
                       left: _iconAnimation.value,
                       child: Row(
                         children: <Widget>[
-                          GestureDetector(
-                              onTap: () {
-                                _flipMenu();
-                              },
-                              child: IconButton(
-                                icon: AnimatedIcon(
-                                  icon: AnimatedIcons.menu_close,
-                                  progress: _controller,
-                                  size: SizeConfig.heightMultiplier * 3,
-                                  color: Colors.black,
-                                ),
+                          IconButton(
+                            onPressed: (){
+                              _flipMenu();
+                            },
+                            icon: AnimatedIcon(
+                              icon: AnimatedIcons.menu_close,
+                              progress: _controller,
+                              size: SizeConfig.heightMultiplier * 3,
+                              color: Colors.black,
+                            ),
 
-                              )),
+                          ),
                           SizedBox(
                             width: SizeConfig.widthMultiplier * 20,
                           ),

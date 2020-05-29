@@ -3,7 +3,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter3dflipmenu/utils/config.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeXD extends StatefulWidget {
   @override
@@ -26,10 +25,10 @@ class _HomeXDState extends State<HomeXD> {
             children: <Widget>[
               Positioned(
                 top: -SizeConfig.heightMultiplier * 0.4,
-                left: SizeConfig.widthMultiplier * 20,
+                right: SizeConfig.widthMultiplier * 20,
                 child: Image.asset(
                   'img/guitar.png',
-                  color: Colors.grey[600].withOpacity(0.8),
+                  color: Colors.grey[700].withOpacity(0.8),
                   width: SizeConfig.imageSizeMultiplier * 64,
                 ),
               ),
@@ -46,7 +45,7 @@ class _HomeXDState extends State<HomeXD> {
             ],
           ),
           Positioned(
-            right: SizeConfig.widthMultiplier * 54,
+            right: SizeConfig.widthMultiplier * 55,
             top: SizeConfig.heightMultiplier * 28,
             child: Transform.rotate(
                 angle: -pi / 2,
